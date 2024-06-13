@@ -3,6 +3,12 @@ export default function Home() {
   return (
     <main>
       <h2>City Girls Who Walk Home Page</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias harum
+        placeat quod, incidunt quaerat assumenda quidem dolorem error odit,
+        veritatis commodi, ducimus quisquam aliquam sed debitis ut molestiae
+        expedita! Sed?
+      </p>
     </main>
   );
 }

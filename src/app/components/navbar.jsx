@@ -1,37 +1,53 @@
+"use client";
+
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import styles from "./navbar.module.css";
+
 export default function Navbar() {
-  const linkStyle = {
-    fontSize: "25px",
-    fontFamily: "Inria Serif",
-    textTransform: "uppercase",
-    fontWeight: "Normal",
+  const router = useRouter();
+  const [hoveredLink, setHoveredLink] = useState(null);
+  const [selectedLink, setSelectedLink] = useState(null); // State to track selected link
+  const links = ["HOME", "ABOUT", "SOCIALS", "MERCH"];
+  const halfwayIndex = Math.floor(links.length / 2 - 1);
+
+  const getLinkHref = (text) =>
+    text === "HOME" ? "/" : `/${text.toLowerCase()}`;
+
+  const getLinkClassName = (text, index) => {
+    const href = getLinkHref(text);
+    const isSelected = router.pathname === href || selectedLink === index; // Check if link is selected
+
+    if (hoveredLink === index) {
+      return `${styles.link} ${styles.linkHover}`;
+    }
+    return isSelected ? `${styles.link} ${styles.selectedLink}` : styles.link;
+  };
+
+  const handleLinkClick = (index) => {
+    setSelectedLink(index); // Set the selected link index when clicked
   };
 
   return (
-    <nav
-      style={{
-        display: "flex",
-        justifyContent: "space-evenly",
-        alignItems: "center",
-        backgroundColor: "#FFFDC8",
-        width: "100%",
-        height: "150px",
-      }}
-    >
-      <Link href="/" style={linkStyle}>
-        HOME
-      </Link>
-      <Link href="/about" style={linkStyle}>
-        ABOUT
-      </Link>
-      <Image src="/pghcgwwcirclelogo.png" alt="logo" height={175} width={175} />
-      <Link href="/social" style={linkStyle}>
-        SOCIALS
-      </Link>
-      <Link href="/merch" style={linkStyle}>
-        MERCH
-      </Link>
+    <nav className={styles.navbar}>
+      {links.map((text, index) => (
+        <React.Fragment key={text}>
+          <Link
+            href={getLinkHref(text)}
+            className={getLinkClassName(text, index)}
+            onMouseEnter={() => setHoveredLink(index)}
+            onMouseLeave={() => setHoveredLink(null)}
+            onClick={() => handleLinkClick(index)} // Call handleLinkClick on click
+          >
+            {text}
+          </Link>
+          {index === halfwayIndex && (
+            <Image src="/CGWWLogo.png" alt="logo" height={180} width={180} />
+          )}
+        </React.Fragment>
+      ))}
     </nav>
   );
 }
