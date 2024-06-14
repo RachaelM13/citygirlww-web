@@ -1,21 +1,71 @@
-.h6 {
-  font-size: 85px;
+.textContainer {
   font-family: "Inria Serif";
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: Bold;
   color: black;
-  padding-left: 150px;
-  padding-top: 80px;
-  flex: 1;
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  padding-right: 4%;
+  margin-left: 10%;
+}
+
+.h1 {
+  font-size: 90px;
+}
+
+.h2 {
+  font-size: 70px;
+}
+
+.h3 {
+  font-size: 30px;
 }
 
 .strip1 {
-  margin-top: 50px;
+  margin-top: 5%;
   display: flex;
+  align-items: center;
 }
 
 .carouselContainer {
   flex: 1;
-  padding-right: 150px;
-  align-items: center; /* Center items vertically */
+  padding-right: 10%;
+  align-items: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .strip1 {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-start; /* Align items to the start */
+    align-items: center;
+  }
+
+  .textContainer {
+    margin-right: 0; /* Remove margin on small screens */
+    margin-bottom: 20px; /* Add space between text and carousel */
+    align-items: center;
+    padding-right: 0%;
+    margin-left: 0%;
+  }
+
+  .carouselContainer {
+    padding-right: 0; /* Remove padding on small screens */
+    width: 100%;
+  }
+
+  .h1 {
+    font-size: 40px; /* Adjust font size for small screens */
+  }
+
+  .h2 {
+    font-size: 25px; /* Adjust font size for small screens */
+  }
+
+  .h3 {
+    font-size: 18px; /* Adjust font size for small screens */
+  }
 }

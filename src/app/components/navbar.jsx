@@ -9,7 +9,7 @@ import styles from "./navbar.module.css";
 export default function Navbar() {
   const router = useRouter();
   const [hoveredLink, setHoveredLink] = useState(null);
-  const [selectedLink, setSelectedLink] = useState(null); // State to track selected link
+  const [selectedLink, setSelectedLink] = useState(null);
   const links = ["HOME", "ABOUT", "SOCIALS", "MERCH"];
   const halfwayIndex = Math.floor(links.length / 2 - 1);
 
@@ -18,16 +18,13 @@ export default function Navbar() {
 
   const getLinkClassName = (text, index) => {
     const href = getLinkHref(text);
-    const isSelected = router.pathname === href || selectedLink === index; // Check if link is selected
+    const isSelected = router.pathname === href;
 
     if (hoveredLink === index) {
       return `${styles.link} ${styles.linkHover}`;
     }
+    console.log("isSelected", isSelected);
     return isSelected ? `${styles.link} ${styles.selectedLink}` : styles.link;
-  };
-
-  const handleLinkClick = (index) => {
-    setSelectedLink(index); // Set the selected link index when clicked
   };
 
   return (
@@ -39,7 +36,7 @@ export default function Navbar() {
             className={getLinkClassName(text, index)}
             onMouseEnter={() => setHoveredLink(index)}
             onMouseLeave={() => setHoveredLink(null)}
-            onClick={() => handleLinkClick(index)} // Call handleLinkClick on click
+            onMouseClick={() => setSelectedLink(index)}
           >
             {text}
           </Link>
