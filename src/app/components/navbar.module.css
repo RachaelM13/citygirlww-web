@@ -17,11 +17,11 @@
 }
 
 .link:hover {
-  color: pink;
+  color: #ffb9f6;
   text-decoration: none;
 }
 
 .selectedLink {
-  color: pink;
+  color: #ffb9f6;
   text-decoration: none;
 }

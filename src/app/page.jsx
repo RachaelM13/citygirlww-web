@@ -1,18 +1,21 @@
-//this is the home front page of the CGWW website
+"use client";
+import styles from "./page.module.css";
+// components
+import CarouselHomePage from "./components/carousel.jsx";
+
 export default function Home() {
   return (
     <main>
-      <h2>City Girls Who Walk Home Page</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias harum
-        placeat quod, incidunt quaerat assumenda quidem dolorem error odit,
-        veritatis commodi, ducimus quisquam aliquam sed debitis ut molestiae
-        expedita! Sed?
-      </p>
+      <div className={styles.strip1}>
+        <h6 className={styles.h6}>
+          CITY GIRLS
+          <br />
+          WHO WALK
+        </h6>
+        <div className={styles.carouselContainer}>
+          <CarouselHomePage />
+        </div>
+      </div>
     </main>
   );
 }
-
-// note
-// all page components need the file name page.jsx
-// and we nest thes page components in folders

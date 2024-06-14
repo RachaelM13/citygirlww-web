@@ -1,5 +1,6 @@
 // navbar goes in the layout file bc it is on every page
 import "./globals.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Inter } from "next/font/google";
 
 //components

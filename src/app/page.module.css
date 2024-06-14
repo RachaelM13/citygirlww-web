@@ -1,0 +1,21 @@
+.h6 {
+  font-size: 85px;
+  font-family: "Inria Serif";
+  text-transform: uppercase;
+  font-weight: normal;
+  color: black;
+  padding-left: 150px;
+  padding-top: 80px;
+  flex: 1;
+}
+
+.strip1 {
+  margin-top: 50px;
+  display: flex;
+}
+
+.carouselContainer {
+  flex: 1;
+  padding-right: 150px;
+  align-items: center; /* Center items vertically */
+}
