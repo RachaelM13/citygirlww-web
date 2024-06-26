@@ -1,33 +1,28 @@
 "use client";
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import ExampleCarouselImage from "./carouselImage.jsx";
+import CarouselImage from "./carouselImage.jsx";
 
 export default function CarouselHomePage() {
   return (
     <Carousel fade>
-      <Carousel.Item interval={4000}>
-        <ExampleCarouselImage src="/CGWWgroup1.jpg" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
+      <Carousel.Item interval={3000}>
+        <CarouselImage
+          src="/CGWWgroup1.jpg"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
       </Carousel.Item>
-      <Carousel.Item interval={4000}>
-        <ExampleCarouselImage src="/CGWWgroup1.jpg" />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
+      <Carousel.Item interval={3000}>
+        <CarouselImage
+          src="/CGWWgroup2.jpg"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
       </Carousel.Item>
-      <Carousel.Item interval={4000}>
-        <ExampleCarouselImage src="/CGWWgroup1.jpg" />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
+      <Carousel.Item interval={3000}>
+        <CarouselImage
+          src="/CGWWgroup6.jpg"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
       </Carousel.Item>
     </Carousel>
   );

@@ -8,8 +8,9 @@
   display: flex;
   flex-direction: column;
 
-  padding-right: 4%;
-  margin-left: 10%;
+  margin-top: 12%;
+  padding-right: 5%;
+  margin-left: 5%;
 }
 
 .h1 {
@@ -25,19 +26,17 @@
 }
 
 .strip1 {
-  margin-top: 5%;
   display: flex;
-  align-items: center;
+  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
 }
 
 .carouselContainer {
   flex: 1;
-  padding-right: 10%;
   align-items: center;
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .strip1 {
     flex-direction: column; /* Stack items vertically on small screens */
     align-items: flex-start; /* Align items to the start */
