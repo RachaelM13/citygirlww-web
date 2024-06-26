@@ -1,23 +1,33 @@
 .navbar {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
   width: 100%;
   height: 125px;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 100;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.Image {
-  margin-left: 2%;
-  margin-right: auto;
+.hamburger {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 101;
+  display: none; /* Hide by default */
 }
 
 .links {
   display: flex;
-  justify-content: stretch;
   align-items: center;
-  width: 100%;
-  margin-right: 3%;
+}
+
+.links.open {
+  transition: max-height 0.3s ease, opacity 0.3s ease; /* Add transition */
 }
 
 .link {
@@ -27,8 +37,7 @@
   font-weight: normal;
   color: black;
   text-decoration: none;
-  padding: 2%;
-  font-weight: bold;
+  margin-right: 65px; /* Adjust as needed */
 }
 
 .link:hover {
@@ -40,19 +49,8 @@
   color: #ff66c4;
 }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
-}
-
-.hamburger div {
-  width: 100%;
-  height: 3px;
-  background-color: black;
+.spacer {
+  flex-grow: 1; /* This will take up the remaining space */
 }
 
 @media (max-width: 768px) {
@@ -60,31 +58,39 @@
     flex-direction: column;
     justify-content: center;
     height: auto;
-    padding: 10px;
+    padding: 45px;
   }
 
   .links {
-    display: none;
     flex-direction: column;
     align-items: center;
     width: 100%;
-  }
-
-  .link:hover {
-    color: #ff66c4;
+    background-color: white;
+    max-height: 0; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+    overflow: hidden; /* Hide content */
+    transition: max-height 0.3s ease, opacity 0.3s ease; /* Add transition */
   }
 
   .links.open {
-    display: flex;
+    max-height: 500px; /* Adjust as needed for content */
+    opacity: 1;
   }
 
   .link {
     font-size: 25px;
     margin: 10px 0;
-    font-weight: medium;
+  }
+
+  .navbar img {
+    margin: 10px 0;
   }
 
   .hamburger {
-    display: flex;
+    display: flex; /* Show only in mobile view */
+  }
+
+  .spacer {
+    display: none; /* Hide spacer in mobile view */
   }
 }

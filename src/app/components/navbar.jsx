@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./navbar.module.css";
 import useMediaQuery from "./useMediaQuery";
+import "./hamburgers.css";
 
 const links = ["HOME", "ABOUT", "SOCIALS", "MERCH"];
 
@@ -42,20 +43,28 @@ export default function Navbar() {
         className={styles.hamburger}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        <div></div>
-        <div></div>
-        <div></div>
+        <button
+          className={`hamburger hamburger--collapse ${
+            isMenuOpen ? "is-active" : ""
+          }`}
+          type="button"
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
       </div>
+      {!isMobile && (
+        <Image
+          className={styles.Image}
+          src="/CGWWnavbarLogo.png"
+          alt="logo"
+          height={520}
+          width={520}
+        />
+      )}
+      <div className={styles.spacer}></div>
       <div className={`${styles.links} ${isMenuOpen ? styles.open : ""}`}>
-        {!isMobile && (
-          <Image
-            className={styles.Image}
-            src="/CGWWnavbarLogo.png"
-            alt="logo"
-            height={550}
-            width={550}
-          />
-        )}
         {links.map((text, index) => (
           <Link legacyBehavior href={getLinkHref(text)} passHref key={text}>
             <a
@@ -70,8 +79,8 @@ export default function Navbar() {
           <Image
             src="/CGWWLogoNoCircle.png"
             alt="logo"
-            height={100}
-            width={150}
+            height={140}
+            width={200}
           />
         )}
       </div>
