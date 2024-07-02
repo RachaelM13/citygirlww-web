@@ -1,73 +1,73 @@
-.textContainer {
-  font-family: "Inria Serif";
-  text-transform: uppercase;
-  font-weight: Bold;
-  color: black;
-
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-
-  margin-top: 14%;
-  padding-right: 5%;
-  margin-left: 5%;
+@font-face {
+  font-family: "CooperMdBT";
+  src: url("fonts/CooperMdBT-Italic.ttf") format("truetype"),
+    url("fonts/CooperMdBT-Italic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
 }
 
 .h1 {
-  font-size: 90px;
+  font-family: "CooperMdBT", sans-serif;
+  letter-spacing: -5px;
+  color: #f772c6;
 }
 
 .h2 {
-  font-size: 70px;
+  line-height: 2.2;
+  font-family: "Inria Serif";
+  font-size: 48px;
+  margin-left: 240px;
 }
 
-.h3 {
-  font-size: 30px;
-  margin-bottom: 20px;
+.textBox {
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
+  margin-left: 45px;
+  display: "flexbox";
+}
+
+.strip2 {
+  background: white;
+  border: black solid 1px;
+  text-transform: uppercase;
+}
+
+.blob {
+  position: fixed;
+  top: 130px;
+  right: 0;
+  fill: #f6dca8;
+  width: 43vmax;
+  transform-origin: 50% 50%;
+  transform: rotate(60deg);
+  z-index: -1;
 }
 
 .strip1 {
   display: flex;
-  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  height: 100vh;
+  text-transform: uppercase;
 }
 
-.carouselContainer {
-  flex: 1;
+.archBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin-top: 125px;
+  margin-left: -10px;
+}
+
+.arch {
+  max-width: 60%;
+  height: auto;
+  z-index: 1;
 }
 
 /* Responsive styles */
 @media (max-width: 1024px) {
   .strip1 {
-    flex-direction: column; /* Stack items vertically on small screens */
-    align-items: flex-start; /* Align items to the start */
-    align-items: center;
-    margin-top: 85px;
-  }
-
-  .textContainer {
-    margin-right: 0;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    align-items: center;
-    padding-right: 0%;
-    margin-left: 0%;
-  }
-
-  .carouselContainer {
-    padding-right: 0; /* Remove padding on small screens */
-    width: 100%;
-  }
-
-  .h1 {
-    font-size: 40px; /* Adjust font size for small screens */
-  }
-
-  .h2 {
-    font-size: 25px; /* Adjust font size for small screens */
-  }
-
-  .h3 {
-    font-size: 18px; /* Adjust font size for small screens */
+    flex-direction: column;
   }
 }

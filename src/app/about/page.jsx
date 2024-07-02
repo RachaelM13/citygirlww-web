@@ -1,7 +1,14 @@
+import Image from "next/image";
 export default function About() {
   return (
     <main>
-      <h2>About Page</h2>
+      <Image
+        src="/g23.png"
+        alt="logo"
+        width={580}
+        height={580}
+        style={{ marginTop: "120px" }}
+      />
     </main>
   );
 }

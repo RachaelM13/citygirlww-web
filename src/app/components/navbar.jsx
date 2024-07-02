@@ -55,13 +55,7 @@ export default function Navbar() {
         </button>
       </div>
       {!isMobile && (
-        <Image
-          className={styles.Image}
-          src="/CGWWnavbarLogo.png"
-          alt="logo"
-          height={520}
-          width={520}
-        />
+        <Image src="/CGWWnavbarLogo.png" alt="logo" height={520} width={520} />
       )}
       <div className={styles.spacer}></div>
       <div className={`${styles.links} ${isMenuOpen ? styles.open : ""}`}>

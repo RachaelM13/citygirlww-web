@@ -1,0 +1,8 @@
+.blob {
+  position: absolute;
+  top: 0;
+  right: 0;
+  fill: #f6dac8;
+  width: 10vmax;
+  transform-origin: 50% 50%;
+}
