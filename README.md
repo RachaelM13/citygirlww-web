@@ -1,8 +1,10 @@
-# CGWW-website
+# CGWW-website 
 
 ## Welcome to the Pittsburgh Community Chapter of City Girls Who Walk! 🚶‍♀️💻
 
-This repository hosts our website code, where women bond, exercise, and embrace the city's beauty through walking. Join us in promoting wellness and community connection in Pittsburgh. Lace-up your shoes and let's walk together!
+This repository hosts our website code, where women bond, exercise, and embrace the city's beauty through walking. Join us in promoting wellness and community connection in Pittsburgh. Lace up your shoes and let's walk together!
+
+<img src="https://github.com/RachaelM13/citygirlww-web/assets/115118738/22ca24bc-6378-491c-9804-9bb7477f2bf4" alt="CGWW Logo" width="200" />
 
 ## Additional Information
 
