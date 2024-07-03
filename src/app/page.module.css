@@ -7,9 +7,46 @@
 }
 
 .h1 {
+  font-size: 126px;
   font-family: "CooperMdBT", sans-serif;
   letter-spacing: -5px;
   color: #f772c6;
+}
+
+.h1Two {
+  font-size: 126px;
+  font-family: "CooperMdBT", sans-serif;
+  letter-spacing: -5px;
+  color: #f772c6;
+  line-height: 0.5;
+  margin-left: 109px;
+}
+
+.strip2 {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background: white;
+  border: black solid 1px;
+  text-transform: uppercase;
+  padding: 15px; /* Add padding if needed */
+}
+
+.h1Three {
+  font-family: "CooperMdBT", sans-serif;
+  color: #f772c6;
+  font-size: 31px;
+  letter-spacing: 4px;
+  margin: 0; /* Remove margins for centering */
+}
+
+.h1Four {
+  font-family: "CooperMdBT", sans-serif;
+  letter-spacing: -5px;
+  color: #f772c6;
+  font-size: 42px;
+  letter-spacing: 4px;
+  margin-bottom: 3%;
 }
 
 .h2 {
@@ -27,10 +64,29 @@
   display: "flexbox";
 }
 
-.strip2 {
-  background: white;
+.contactBodyText {
+  font-family: "Inria Serif";
+  font-size: 21px;
+}
+
+.contactButtonText {
+  font-family: "CooperMdBT", sans-serif;
+  color: #f2efea;
+}
+
+.contactTextContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  margin-left: 350px;
+  margin-right: 350px;
+  background-color: #f2efea;
   border: black solid 1px;
-  text-transform: uppercase;
+}
+
+.strip3 {
+  background: linear-gradient(to bottom, #d4c4e9, #f6dca8);
+  padding-bottom: 40px;
 }
 
 .blob {
@@ -67,7 +123,100 @@
 
 /* Responsive styles */
 @media (max-width: 1024px) {
+  .h1 {
+    font-size: 60px;
+    font-family: "CooperMdBT", sans-serif;
+    letter-spacing: -5px;
+    color: #f772c6;
+  }
+
+  .h1Two {
+    font-size: 60px;
+    font-family: "CooperMdBT", sans-serif;
+    letter-spacing: -5px;
+    color: #f772c6;
+    line-height: 0.5;
+    margin-left: 32px;
+  }
+
+  .h1Three {
+    font-family: "CooperMdBT", sans-serif;
+    color: #f772c6;
+    font-size: 18px;
+  }
+
+  .h1Four {
+    font-size: 0px;
+    font-family: "CooperMdBT", sans-serif;
+    letter-spacing: -5px;
+    color: #f772c6;
+    font-size: 35px;
+    letter-spacing: 4px;
+    margin-bottom: 3%;
+  }
+
+  .h2 {
+    font-size: 24px;
+    margin-left: 50px;
+  }
+
+  .blob {
+    position: fixed;
+    top: 280px;
+    right: 0;
+    fill: #f6dca8;
+    width: 43vmax;
+    transform-origin: 50% 50%;
+    transform: rotate(60deg);
+    z-index: -1;
+  }
+
+  .textBox {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .contactTextContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .contactBodyText {
+    font-size: 18px;
+  }
+
+  .contactButtonText {
+    font-size: 18px;
+  }
+
   .strip1 {
     flex-direction: column;
+    align-content: center;
+    margin-left: -25px;
+    height: fit-content;
+  }
+
+  .strip2 {
+    background: white;
+    text-transform: uppercase;
+    padding: 5px;
+    margin-top: 20px;
+  }
+
+  .strip3 {
+    background: linear-gradient(to bottom, #d4c4e9, #f6dca8);
+    padding-bottom: 50px;
+    padding-top: 40px;
+  }
+
+  .archBox {
+    margin-top: 0;
+    width: 90%;
+  }
+
+  .arch {
+    z-index: 1;
   }
 }

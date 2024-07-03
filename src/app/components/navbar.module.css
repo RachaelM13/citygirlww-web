@@ -59,7 +59,8 @@
     flex-direction: column;
     justify-content: center;
     height: auto;
-    padding: 45px;
+    padding: 50px;
+    margin-top: 0%;
   }
 
   .links {
@@ -74,6 +75,7 @@
   }
 
   .links.open {
+    margin-top: 30px;
     max-height: 500px; /* Adjust as needed for content */
     opacity: 1;
   }
@@ -89,6 +91,15 @@
 
   .hamburger {
     display: flex; /* Show only in mobile view */
+    align-items: flex-start; /* Align items to the start */
+    margin-left: auto; /* Move the hamburger button to the right */
+  }
+
+  .navbarLogo {
+    position: fixed;
+    top: -10px;
+    left: 0;
+    z-index: 1000; /* Ensure the logo stays on top */
   }
 
   .spacer {

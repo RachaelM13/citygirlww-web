@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "CooperMdBT";
+  src: url("../fonts/CooperMdBT-Italic.ttf") format("truetype"),
+    url("../fonts/CooperMdBT-Italic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+.body {
+  position: relative;
+  background-color: #f2efea;
+  display: flex;
+}
+
+.contactButtonText {
+  padding: 0px 100px 0px 100px;
+  font-family: "CooperMdBT", sans-serif;
+  color: #f772c6;
+}
+
+.h1 {
+  font-size: 110px;
+  font-family: "CooperMdBT", sans-serif;
+  letter-spacing: -5px;
+  color: #f772c6;
+  margin-top: 105px;
+  text-transform: uppercase;
+  padding: 20px;
+  z-index: 2;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 58%;
+}
+
+.Image1 {
+  z-index: 2;
+  right: 3%;
+  margin-top: 40px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

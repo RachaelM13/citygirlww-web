@@ -1,25 +1,37 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 // components
 import GalleryStrip from "./components/GalleryStrip";
-import MarqueeComponent from "./components/MarqueeComponent";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1180);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <main>
       {/* strip1 */}
       <div className={styles.strip1}>
         <div className={styles.textBox}>
-          <h1 className={styles.h1} style={{ fontSize: "126px" }}>
-            city girls
-          </h1>
-          <h1
-            className={styles.h1}
-            style={{ lineHeight: 0.5, marginLeft: "109px", fontSize: "126px" }}
-          >
-            who walk
-          </h1>
+          <h1 className={styles.h1}>city girls</h1>
+          <h1 className={styles.h1Two}>who walk</h1>
           <h2 className={styles.h2}>official pgh chapter</h2>
         </div>
         <div className={styles.archBox}>
@@ -38,22 +50,71 @@ export default function Home() {
           </svg>
         </div>
       </div>
-      {/* strip2 */}
-      <div className={styles.strip2}>
-        <h2
-          className={styles.h1}
-          style={{
-            fontSize: "26px",
-            letterSpacing: "4px",
-            marginBottom: "15px",
-            marginTop: "15px",
-          }}
-        >
-          &nbsp; walk &nbsp; bond &nbsp; thrive &nbsp; empower &nbsp; repeat
-          &nbsp; walk &nbsp; bond &nbsp; thrive &nbsp; empower &nbsp; repeat
-          &nbsp;
-        </h2>
+
+      {!isMobile ? (
+        <div className={styles.strip2}>
+          {/* Collab Gallery */}
+          <h2 className={styles.h1Three}>
+            walk&nbsp;bond&nbsp;thrive&nbsp;empower&nbsp;repeat&nbsp;walk&nbsp;bond&nbsp;thrive&nbsp;empower&nbsp;repeat
+          </h2>
+        </div>
+      ) : (
+        <div className={styles.strip2}>
+          {/* Collab Gallery */}
+          <h2 className={styles.h1Three}>
+            walk&nbsp;bond&nbsp;empower&nbsp;repeat
+          </h2>
+        </div>
+      )}
+
+      {isMobile ? (
+        <Image
+          src="/CGWWgroup2.jpg"
+          alt="Mobile View"
+          layout="responsive"
+          width={200}
+          height={100}
+        />
+      ) : (
         <GalleryStrip />
+      )}
+
+      {/* strip3 Contact US */}
+      <div className={styles.strip3}>
+        <div className={styles.contactTextContainer}>
+          <h1 className={styles.h1Four}>
+            City Girls Who Walk: <br />
+            Join Us in Collaboration!
+          </h1>
+          <p className={styles.contactBodyText}>
+            At City Girls Who Walk, we thrive on collaboration. Whether we are
+            strolling to our favorite local shops or breaking a sweat at
+            Pittsburgh&apos;s finest workout spots, we are always eager to team
+            up with local businesses. Our gallery showcases the vibrant events
+            and partnerships we have cherished, and we would love for you to be
+            part of our journey!
+            <br />
+            Are you interested in hosting an event with City Girls Who Walk? We
+            would love to hear from you! Simply fill out the form below, and
+            let&apos;s create something amazing together.
+          </p>
+          <a
+            className="btn btn-primary"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScmTroPl0SSKNBvwXsNkItXFD4TmiOnJT5bTxQT4QBCWrmIig/viewform?usp=sf_link"
+            role="button"
+            target="_blank"
+            style={{
+              fontSize: "21px",
+              backgroundColor: "#f772c6",
+              border: "none",
+              width: "fit-content",
+              marginTop: "3%",
+              borderRadius: "25px",
+            }}
+          >
+            <h1 className={styles.contactButtonText}>Contact Us</h1>
+          </a>
+        </div>
       </div>
     </main>
   );

@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "CooperMdBT";
+  src: url("../fonts/CooperMdBT-Italic.ttf") format("truetype"),
+    url("../fonts/CooperMdBT-Italic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+.blob {
+  position: fixed;
+  top: 130px;
+  right: 0;
+  fill: #f6dca8;
+  width: 40vmax;
+  transform-origin: 50% 50%;
+  transform: rotate(60deg);
+  z-index: 1;
+}
+
+.body {
+  position: relative;
+  background-color: #f2efea;
+  margin: 2% 5% 2% 5%;
+}
+
+.h1 {
+  font-size: 110px;
+  font-family: "CooperMdBT", sans-serif;
+  letter-spacing: -5px;
+  color: #f772c6;
+  margin-top: 125px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.h2 {
+  font-size: 48px;
+  font-family: "CooperMdBT", sans-serif;
+}
+
+.h3 {
+  font-size: 28px;
+  margin-top: 10px;
+  font-family: "Inria Serif";
+  font-weight: bold;
+}
+
+.p {
+  font-size: 24px;
+  margin-top: 10px;
+  font-family: "Inria Serif";
+}
+
+.strip1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.textContainer {
+  z-index: 2;
+  left: 3%;
+  border: 1px solid black;
+  width: 47%;
+  padding: 3%;
+}
+
+.Image1 {
+  z-index: 2;
+  right: 3%;
+  margin-top: 40px;
+}
+
+.Image2 {
+  z-index: 2;
+  left: 3%;
+  margin-top: 40px;
+}

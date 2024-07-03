@@ -39,6 +39,15 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar}>
+      {isMobile && (
+        <Image
+          className={styles.navbarLogo}
+          src="/CGWWnavbarLogo.png"
+          alt="logo"
+          height={320}
+          width={320}
+        />
+      )}
       <div
         className={styles.hamburger}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -69,6 +78,18 @@ export default function Navbar() {
             </a>
           </Link>
         ))}
+        <a
+          href="https://www.instagram.com/citygirlswhowalkpgh/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/Instagram_Glyph_Black.png"
+            alt="Instagram logo"
+            height={30}
+            width={30}
+          />
+        </a>
         {isMobile && (
           <Image
             src="/CGWWLogoNoCircle.png"
