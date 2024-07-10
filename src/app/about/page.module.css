@@ -79,3 +79,117 @@
   left: 3%;
   margin-top: 40px;
 }
+
+.logoContainer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1%;
+}
+
+@media (max-width: 1180px) {
+  .body {
+    position: relative;
+    background-color: #f2efea;
+    height: fit-content;
+    margin: 1% 1% 1% 1%;
+  }
+
+  .h1 {
+    font-size: 48px; /* Adjust font size for smaller screens */
+    margin-top: 150px; /* Adjust margin for smaller screens */
+    padding: 0px;
+  }
+
+  .strip1 {
+    flex-direction: column; /* Stack strips vertically on smaller screens */
+    align-items: center; /* Center items vertically */
+  }
+
+  .textContainer {
+    width: 90%; /* Adjust width for smaller screens */
+    margin-bottom: 20px; /* Add space between text and image */
+    text-align: center; /* Center text on smaller screens */
+    margin-top: 20px;
+  }
+
+  .Image1,
+  .Image2 {
+    width: 100%; /* Make images full width on smaller screens */
+    margin-top: 10px; /* Adjust margin for spacing */
+    margin-bottom: 10px;
+  }
+
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1% 1% 10% 1%; /* Adjust margin as needed */
+    position: relative;
+  }
+
+  .logoImage {
+    width: 100%; /* Ensure the image takes full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 667px) {
+  .logoContainer {
+    margin-bottom: 5%;
+  }
+}
+
+@media (min-width: 344px) and (max-width: 882px) {
+  .logoContainer {
+    margin-bottom: 70%;
+  }
+}
+@media (min-width: 360px) and (max-width: 740px) {
+  .logoContainer {
+    margin-bottom: 25%;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 896px) {
+  .logoContainer {
+    margin-bottom: 65%;
+  }
+  .logoImage {
+    z-index: 1;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 844px) {
+  .logoContainer {
+    margin-bottom: 58%;
+  }
+}
+
+@media (min-width: 412px) and (max-width: 915px) {
+  .logoContainer {
+    margin-bottom: 65%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logoContainer {
+    margin-bottom: 50%;
+  }
+  .logoImage {
+    z-index: 1;
+  }
+}
+
+@media (min-width: 820px) and (max-width: 1368px) {
+  .logoContainer {
+    margin-bottom: 78%;
+  }
+  .logoImage {
+    z-index: 1;
+  }
+}

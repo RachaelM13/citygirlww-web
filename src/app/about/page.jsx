@@ -84,21 +84,13 @@ export default function About() {
             height={450}
           />
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            height: "100%",
-          }}
-        >
+        <div className={styles.logoContainer}>
           <Image
+            className={styles.logoImage}
             src="/CGWWLogoNoCircle.png"
             alt="about"
             width={250}
             height={250}
-            style={{ display: "block" }}
           />
         </div>
       </div>

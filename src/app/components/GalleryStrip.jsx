@@ -49,7 +49,7 @@ const GalleryStrip = () => {
           />
           <figcaption>
             CITY GIRLS <br />
-            WHO BALLET
+            WHO WORKOUT
           </figcaption>
           <div></div>
           <div></div>
