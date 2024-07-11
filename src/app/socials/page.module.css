@@ -9,7 +9,20 @@
 .body {
   position: relative;
   background-color: #f2efea;
+}
+
+.waterfall {
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom, #d4c4e9, #f6dca8);
+}
+
+.container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2efea;
+  margin: 8% 5% 2% 5%;
 }
 
 .contactButtonText {
@@ -23,19 +36,10 @@
   font-family: "CooperMdBT", sans-serif;
   letter-spacing: -5px;
   color: #f772c6;
-  margin-top: 105px;
   text-transform: uppercase;
   padding: 20px;
   z-index: 2;
   text-align: center;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 58%;
 }
 
 .Image1 {
@@ -48,4 +52,29 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  padding: 20px;
+}
+
+@media (max-width: 1040px) {
+  .h1 {
+    margin-top: 125px;
+    font-size: 48px;
+    padding: 0px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 1% 1% 1%;
+  }
+
+  .buttonContainer {
+    padding: 0px;
+  }
+
+  .contactButtonText {
+    font-size: 24px;
+    padding: 0px 10px 0px 10px;
+  }
 }

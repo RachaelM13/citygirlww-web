@@ -1,9 +1,9 @@
+"use client";
+import { useEffect } from "react";
 import styles from "./page.module.css";
-import Image from "next/image";
 
 const buttonStyle = {
   fontSize: "32px",
-  // backgroundImage: "linear-gradient(white, #f772c6)",
   backgroundColor: "white",
   border: "1px solid black",
   borderRadius: "35px",
@@ -34,16 +34,26 @@ const buttonData = [
 ];
 
 export default function Social() {
+  useEffect(() => {
+    // Create script element
+    const script = document.createElement("script");
+    script.async = true;
+    script.charset = "UTF-8";
+    script.src =
+      "https://cdn.curator.io/published/fd37cd3d-2abf-45a2-8b4b-22ca17cd6cff.js";
+
+    // Append the script to the document body
+    document.body.appendChild(script);
+
+    // Cleanup function to remove the script
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <main>
       <div className={styles.body}>
-        <Image
-          className={styles.Image1}
-          src="/g23.png"
-          alt="about"
-          width={650}
-          height={450}
-        />
         <div className={styles.container}>
           <h1 className={styles.h1}>follow us!</h1>
           <div className={styles.buttonContainer}>
@@ -60,6 +70,15 @@ export default function Social() {
               </a>
             ))}
           </div>
+        </div>
+        <div className={styles.waterfall} id="curator-feed-default-feed-layout">
+          <a
+            href="https://curator.io"
+            target="_blank"
+            className="crt-logo crt-tag"
+          >
+            Powered by Curator.io
+          </a>
         </div>
       </div>
     </main>
