@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "CooperMdBT";
+  src: url("../fonts/CooperMdBT-Italic.ttf") format("truetype"),
+    url("../fonts/CooperMdBT-Italic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+.h1 {
+  font-size: 110px;
+  font-family: "CooperMdBT", sans-serif;
+  letter-spacing: -5px;
+  color: #f772c6;
+  text-transform: uppercase;
+  padding: 20px;
+  z-index: 2;
+}
+
+.card {
+  display: inline-flex; /* Change from 'flex' to 'inline-flex' to shrink to content size */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}

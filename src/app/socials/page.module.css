@@ -26,6 +26,7 @@
 }
 
 .contactButtonText {
+  font-size: 24px;
   padding: 0px 100px 0px 100px;
   font-family: "CooperMdBT", sans-serif;
   color: #f772c6;
@@ -59,14 +60,14 @@
 @media (max-width: 1040px) {
   .h1 {
     margin-top: 125px;
-    font-size: 48px;
+    font-size: 60px;
     padding: 0px;
   }
 
   .container {
     display: flex;
     flex-direction: column;
-    margin: 5% 1% 1% 1%;
+    margin: 5% 1% 10% 1%;
   }
 
   .buttonContainer {
@@ -76,5 +77,76 @@
   .contactButtonText {
     font-size: 24px;
     padding: 0px 10px 0px 10px;
+  }
+}
+@media (min-width: 344px) and (max-width: 882px) {
+  .waterfall {
+    margin-bottom: 220px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 740px) {
+  .waterfall {
+    margin-bottom: 78px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 667px) {
+  .waterfall {
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 844px) {
+  .waterfall {
+    margin-bottom: 182px;
+  }
+}
+
+@media (min-width: 412px) and (max-width: 915px) {
+  .waterfall {
+    margin-bottom: 252px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 896px) {
+  .waterfall {
+    margin-bottom: 240px;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 932px) {
+  .waterfall {
+    margin-bottom: 270px;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 720px) {
+  .waterfall {
+    margin-bottom: 58px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .waterfall {
+    margin-bottom: 362px;
+  }
+}
+
+@media (min-width: 820px) and (max-width: 1180px) {
+  .waterfall {
+    margin-bottom: 518px;
+  }
+}
+
+@media (min-width: 853px) and (max-width: 1280px) {
+  .waterfall {
+    margin-bottom: 618px;
+  }
+}
+
+@media (min-width: 912px) and (max-width: 1368px) {
+  .waterfall {
+    margin-bottom: 704px;
   }
 }

@@ -99,7 +99,7 @@
   }
 
   .h1 {
-    font-size: 48px; /* Adjust font size for smaller screens */
+    font-size: 55px; /* Adjust font size for smaller screens */
     margin-top: 150px; /* Adjust margin for smaller screens */
     padding: 0px;
   }
@@ -138,56 +138,102 @@
   }
 }
 
-@media (min-width: 375px) and (max-width: 667px) {
-  .logoContainer {
-    margin-bottom: 5%;
-  }
-}
-
 @media (min-width: 344px) and (max-width: 882px) {
+  .h1 {
+    font-size: 48px;
+  }
   .logoContainer {
     margin-bottom: 70%;
   }
 }
+
+/* Samsung Galaxy Fold */
 @media (min-width: 360px) and (max-width: 740px) {
   .logoContainer {
-    margin-bottom: 25%;
+    margin-bottom: 110px;
   }
 }
-
-@media (min-width: 414px) and (max-width: 896px) {
+@media (min-width: 375px) and (max-width: 667px) {
   .logoContainer {
-    margin-bottom: 65%;
-  }
-  .logoImage {
-    z-index: 1;
+    margin-bottom: 20px;
   }
 }
 
+/* 12 pro */
 @media (min-width: 390px) and (max-width: 844px) {
   .logoContainer {
-    margin-bottom: 58%;
-  }
-}
-
-@media (min-width: 412px) and (max-width: 915px) {
-  .logoContainer {
-    margin-bottom: 65%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .logoContainer {
-    margin-bottom: 50%;
+    margin-bottom: 200px;
   }
   .logoImage {
     z-index: 1;
   }
 }
 
+/* iphone 14 & pixle 7 & Samsung Galacy Ultra */
+@media (min-width: 412px) and (max-width: 915px) {
+  .h1 {
+    font-size: 55px;
+  }
+  .logoContainer {
+    margin-bottom: 290px;
+  }
+}
+
+/* XR */
+@media (min-width: 414px) and (max-width: 896px) {
+  .h1 {
+    font-size: 55px;
+  }
+  .logoImage {
+    margin-bottom: -20px;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 720px) {
+  .h1 {
+    font-size: 60px;
+  }
+  .logoContainer {
+    margin-bottom: 80px;
+  }
+}
+
+/* ipad mini */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .h1 {
+    font-size: 80px;
+  }
+  .logoContainer {
+    margin-bottom: 380px;
+  }
+  .logoImage {
+    z-index: 1;
+  }
+}
+
+/* ipad Air */
 @media (min-width: 820px) and (max-width: 1368px) {
   .logoContainer {
-    margin-bottom: 78%;
+    margin-bottom: 540px;
+  }
+  .logoImage {
+    z-index: 1;
+  }
+}
+
+@media (min-width: 853px) and (max-width: 1280px) {
+  .logoContainer {
+    margin-bottom: 640px;
+  }
+  .logoImage {
+    z-index: 1;
+  }
+}
+
+@media (min-width: 912px) and (max-width: 1368px) {
+  .logoContainer {
+    margin-bottom: 730px;
   }
   .logoImage {
     z-index: 1;
