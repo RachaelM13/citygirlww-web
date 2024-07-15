@@ -24,7 +24,7 @@ export default function Merch() {
           }
         >
           <img
-            src="BonfireMerch.png" // Replace with a relevant image URL
+            src="Bonfiremerch.png" // Replace with a relevant image URL
             alt="Bonfire Store"
             style={{ width: "600px", height: "auto", objectFit: "cover" }}
           />
